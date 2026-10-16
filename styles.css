@@ -1,0 +1,300 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f3f5f8;
+  color: #172033;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background: #112238;
+  color: white;
+  padding: 24px max(calc((100% - 1100px) / 2), 24px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+header h1 {
+  margin: 4px 0 0;
+  font-size: 27px;
+}
+
+.eyebrow {
+  color: #8fa4bd;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin: 0 0 8px;
+}
+
+.badge {
+  border: 1px solid #60748b;
+  border-radius: 20px;
+  padding: 9px 13px;
+  font-size: 12px;
+}
+
+main {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #19483d;
+  color: white;
+  border-radius: 16px;
+  padding: 30px;
+}
+
+.hero .eyebrow {
+  color: #b3d9c9;
+}
+
+.hero h2 {
+  font-size: 27px;
+  margin: 0 0 10px;
+}
+
+.hero p:last-child {
+  color: #d8e9e3;
+  margin-bottom: 0;
+}
+
+.ball {
+  font-size: 65px;
+  padding: 0 15px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.stat {
+  background: white;
+  padding: 20px;
+  border: 1px solid #e1e6ed;
+  border-radius: 12px;
+}
+
+.stat span {
+  color: #697589;
+  font-size: 13px;
+}
+
+.stat strong {
+  display: block;
+  font-size: 31px;
+  margin-top: 10px;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 25px 0 15px;
+}
+
+button {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tabs button {
+  border: 1px solid #dce2ea;
+  background: white;
+  color: #4e5b6f;
+  border-radius: 8px;
+  padding: 12px 18px;
+}
+
+.tabs button.active {
+  background: #19483d;
+  color: white;
+  border-color: #19483d;
+}
+
+.panel {
+  background: white;
+  padding: 25px;
+  border: 1px solid #e1e6ed;
+  border-radius: 14px;
+}
+
+.panel h2 {
+  font-size: 21px;
+  margin: 0 0 20px;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 12px;
+  padding: 18px;
+  background: #f7f9fb;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 150px;
+  gap: 7px;
+  color: #566276;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  border: 1px solid #d4dce6;
+  background: white;
+  border-radius: 7px;
+  padding: 12px;
+  font-size: 14px;
+  color: #172033;
+}
+
+.primary {
+  background: #226b52;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 13px 16px;
+}
+
+.primary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #edf0f4;
+  font-size: 13px;
+}
+
+th {
+  color: #6b7789;
+  background: #fafbfd;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.danger {
+  background: #fff5f5;
+  color: #a33c3c;
+  border: 1px solid #f0d4d4;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+.status {
+  display: inline-block;
+  background: #e3f4e9;
+  color: #26734b;
+  padding: 5px 9px;
+  border-radius: 15px;
+  font-size: 11px;
+}
+
+.empty {
+  color: #7b8798;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.footer {
+  text-align: center;
+  color: #7c8796;
+  font-size: 12px;
+  padding: 25px 0;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #173c31;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 9px;
+  box-shadow: 0 5px 20px #0002;
+}
+
+@media (max-width: 650px) {
+  header {
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  .hero {
+    padding: 22px;
+  }
+
+  .hero h2 {
+    font-size: 22px;
+  }
+
+  .ball {
+    font-size: 42px;
+    padding: 0;
+  }
+
+  .stats {
+    gap: 8px;
+  }
+
+  .stat {
+    padding: 13px;
+  }
+
+  .stat span {
+    font-size: 11px;
+  }
+
+  .stat strong {
+    font-size: 24px;
+  }
+
+  .panel {
+    padding: 15px;
+  }
+
+  .form {
+    padding: 12px;
+  }
+
+  .primary {
+    width: 100%;
+  }
+}
